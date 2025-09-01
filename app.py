@@ -1,6 +1,5 @@
 import streamlit as st
 import io
-from docx import Document
 from PyPDF2 import PdfReader
 import google.generativeai as genai
 import json
@@ -318,4 +317,5 @@ if st.session_state.step == "questions":
             st.success("¡Has respondido a todas las preguntas!")
             if st.button('Volver a empezar', use_container_width=True):
                 st.session_state.clear()
+
                 st.rerun()
