@@ -1,5 +1,7 @@
 import streamlit as st
 import io
+from pypdf import PdfReader 
+from docx import Document
 import google.generativeai as genai
 import json
 import re
@@ -318,6 +320,7 @@ if st.session_state.step == "questions":
                 st.session_state.clear()
 
                 st.rerun()
+
 
 
 
